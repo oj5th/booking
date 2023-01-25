@@ -1,24 +1,48 @@
-# README
+##### Prerequisites
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The setups steps expect following tools installed on the system.
 
-Things you may want to cover:
+- Github
+- Ruby [2.5.1]
+- Rails [5.2.8]
+- Postgresql
+- Postman
 
-* Ruby version
+##### 1. Check out the repository
 
-* System dependencies
+```bash
+git clone git@github.com:oj5th/booking.git
+```
 
-* Configuration
+##### 2. Setup database.yml file
 
-* Database creation
+Edit the database configuration as required with your postgresql username and password.
 
-* Database initialization
+##### 3. Create and setup the database
 
-* How to run the test suite
+Run the following commands to create and setup the database.
 
-* Services (job queues, cache servers, search engines, etc.)
+```ruby
+bundle exec rails db:create
+bundle exec rails db:migrate
+```
 
-* Deployment instructions
+##### 4. Start the Rails server
 
-* ...
+You can start the rails server using the command given below.
+
+```ruby
+bundle exec rails s
+```
+
+And now you can visit the api using postman with the URL http://localhost:3000
+
+##### 5. API Enpoints
+
+### Get all guests with reservations
+
+GET /reservations
+
+```shell
+GET /reservations
+```
