@@ -105,13 +105,10 @@ Sample Payload 2:
 ```
 
 ##### Update Reservations Details
-Note: I added update for phone numbers, I noticed that `phone number` key for payload 1 is different with payload 2.
+Note: I added update for phone numbers, I noticed that `phone number` key for payload 1 is different with payload 2. Payload is same with POST Request, you can try both payload and try also to change `guest_phone_numbers` values or `phone` values to see the difference.
+
 
 > PUT /reservations
-
-```shell
-Payload is same with POST Request, you can try both payload and try also to change `guest_phone_numbers` values or `phone` values to see the difference.
-```
 
 ##### GET Specific Reservation
 This is just created to check the changes made for PUT and POST request.
