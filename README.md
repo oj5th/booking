@@ -107,6 +107,8 @@ Sample Payload 2:
 ##### Update Reservations Details
 Note: I added update for phone numbers, I noticed that `phone number` key for payload 1 is different with payload 2. You can try both payload and try also to change `guest_phone_numbers` values or `phone` values to see the difference.
 
+> PUT /reservations
+
 Sample Payload 1: (Changed: end_date, nights, status)
 ```shell
 {
@@ -164,8 +166,6 @@ Sample Payload 2: (Changed: status. It can change number_of_guests, end_date if 
 }
 ```
 
-
-> PUT /reservations
 
 ##### GET Specific Reservation
 This is just created to check the changes made for PUT and POST request.
