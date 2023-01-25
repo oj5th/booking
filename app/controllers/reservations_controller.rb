@@ -63,6 +63,8 @@ class ReservationsController < ApplicationController
           current_guest.update_attributes(phone_numbers: generated_payload_guest[:phone_numbers])
         end
         render json: { message: "Reservation successfully updated!", status_code: 200 }, status: :ok
+      else
+        render json: { message: current_reservation.errors, status_code: 422 }, status: :unprocessable_entity
       end
     else
       render json: { message: "Email #{generated_payload_guest[:email]} or/and reservation code: #{generated_payload_reservation[:code]} not found", status_code: 404 }, status: :not_found
