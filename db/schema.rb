@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2023_01_24_145256) do
   create_table "guests", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "phone_numbers"
+    t.text "phone_numbers", default: [], array: true
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
